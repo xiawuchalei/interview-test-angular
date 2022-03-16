@@ -20,7 +20,7 @@ namespace interview_test_angular.Mediatr.Forecast
     public class GetForcastHandler : IRequestHandler<GetForcastRequest, GetForcastResponse>
     {
         private static readonly string[] Summaries = new[]
-{
+        {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 

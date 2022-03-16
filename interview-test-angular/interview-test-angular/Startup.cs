@@ -1,5 +1,5 @@
-using Autofac;
-using interview_test_angular.Configuration;
+using interview_test_angular.Mediatr;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +28,9 @@ namespace interview_test_angular
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            // Register the MediatR request handlers
+            services.RegisterRequestHandlers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,17 +77,17 @@ namespace interview_test_angular
             });
         }
 
-        /// <summary>
-        /// Configure the AutoFac Container.
-        /// ConfigureContainer is where you can register things directly
-        /// with Autofac. This runs after ConfigureServices so the things
-        /// here will override registrations made in ConfigureServices.
-        /// Don't build the container; that gets done for you by the factory.
-        /// </summary>
-        /// <param name="builder">The container builder.</param>
-        public void ConfigureContainer(ContainerBuilder builder)
-        {
-            builder.RegisterModule(new AutoFacModule(Configuration));
-        }
+        ///// <summary>
+        ///// Configure the AutoFac Container.
+        ///// ConfigureContainer is where you can register things directly
+        ///// with Autofac. This runs after ConfigureServices so the things
+        ///// here will override registrations made in ConfigureServices.
+        ///// Don't build the container; that gets done for you by the factory.
+        ///// </summary>
+        ///// <param name="builder">The container builder.</param>
+        //public void ConfigureContainer(ContainerBuilder builder)
+        //{
+        //   // builder.RegisterModule(new AutoFacModule(Configuration));
+        //}
     }
 }

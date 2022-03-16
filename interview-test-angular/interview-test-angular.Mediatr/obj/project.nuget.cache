@@ -1,16 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "lTb8BjEWCzGHa7htWX+EtOXiO0BzGLCxFpSjTAkIeCpNTXPwZPKVHJrj9nmudjoK8srU+p4stiZHvGH82MxtiQ==",
+  "dgSpecHash": "AvWLfWGyPIfRWVx2OEGhnHE6gNkuXHvKcWuXdLktTgStBdn6vg0Hu4CfvT+4gNltOqeRlWcOJHQTIniIOYBL+g==",
   "success": true,
   "projectFilePath": "D:\\Projects\\interview-test-angular\\interview-test-angular\\interview-test-angular.Mediatr\\interview-test-angular.Mediatr.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\delangea\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
-    "C:\\Users\\delangea\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.2.0\\autofac.extensions.dependencyinjection.7.2.0.nupkg.sha512",
     "C:\\Users\\delangea\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\delangea\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\delangea\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
-    "C:\\Users\\delangea\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\delangea\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+    "C:\\Users\\delangea\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

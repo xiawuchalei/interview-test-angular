@@ -20,11 +20,6 @@ namespace interview_test_angular.Controllers
         /// </summary>
         protected IMediator Mediator => mediator ??= (IMediator)HttpContext.RequestServices.GetService(typeof(IMediator))!;
 
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
         private readonly ILogger<WeatherForecastController> _logger;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
@@ -35,7 +30,7 @@ namespace interview_test_angular.Controllers
         [HttpGet]
         public async Task<IEnumerable<WeatherForecast>> Get()
         {
-            var reponse = await mediator.Send(new GetForcastRequest());
+            var reponse = await Mediator.Send(new GetForcastRequest());
 
             return reponse.Forecast;
         }
