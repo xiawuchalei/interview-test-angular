@@ -1,0 +1,12 @@
+D:\Projects\interview-test-angular\interview-test-angular\interview-test-angular.Models\bin\Debug\net5.0\interview-test-angular.Models.deps.json
+D:\Projects\interview-test-angular\interview-test-angular\interview-test-angular.Models\bin\Debug\net5.0\interview-test-angular.Models.dll
+D:\Projects\interview-test-angular\interview-test-angular\interview-test-angular.Models\bin\Debug\net5.0\ref\interview-test-angular.Models.dll
+D:\Projects\interview-test-angular\interview-test-angular\interview-test-angular.Models\bin\Debug\net5.0\interview-test-angular.Models.pdb
+D:\Projects\interview-test-angular\interview-test-angular\interview-test-angular.Models\obj\Debug\net5.0\interview-test-angular.Models.csproj.AssemblyReference.cache
+D:\Projects\interview-test-angular\interview-test-angular\interview-test-angular.Models\obj\Debug\net5.0\interview-test-angular.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\interview-test-angular\interview-test-angular\interview-test-angular.Models\obj\Debug\net5.0\interview-test-angular.Models.AssemblyInfoInputs.cache
+D:\Projects\interview-test-angular\interview-test-angular\interview-test-angular.Models\obj\Debug\net5.0\interview-test-angular.Models.AssemblyInfo.cs
+D:\Projects\interview-test-angular\interview-test-angular\interview-test-angular.Models\obj\Debug\net5.0\interview-test-angular.Models.csproj.CoreCompileInputs.cache
+D:\Projects\interview-test-angular\interview-test-angular\interview-test-angular.Models\obj\Debug\net5.0\interview-test-angular.Models.dll
+D:\Projects\interview-test-angular\interview-test-angular\interview-test-angular.Models\obj\Debug\net5.0\ref\interview-test-angular.Models.dll
+D:\Projects\interview-test-angular\interview-test-angular\interview-test-angular.Models\obj\Debug\net5.0\interview-test-angular.Models.pdb
