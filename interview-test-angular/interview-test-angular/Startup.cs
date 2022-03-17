@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace interview_test_angular
 {
@@ -30,11 +31,10 @@ namespace interview_test_angular
             services.AddCors(options => options.AddDefaultPolicy(builder =>
             {
 
-                builder.WithOrigins(new string[] { "http://localhost:4200", "http://localhost:8100", "http://localhost" })
-                                    .AllowAnyMethod()
-                                    .AllowAnyHeader()
-                                    .AllowCredentials();
+                builder.WithOrigins("http://localhost:4200", "http://localhost:8100", "http://localhost");
             }));
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +51,12 @@ namespace interview_test_angular
                 app.UseHsts();
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+                options.RoutePrefix = string.Empty;
+            });
             app.UseCors();
 
             app.UseHttpsRedirection();
@@ -69,18 +75,5 @@ namespace interview_test_angular
                     pattern: "{controller}/{action=Index}/{id?}");
             });
         }
-
-        ///// <summary>
-        ///// Configure the AutoFac Container.
-        ///// ConfigureContainer is where you can register things directly
-        ///// with Autofac. This runs after ConfigureServices so the things
-        ///// here will override registrations made in ConfigureServices.
-        ///// Don't build the container; that gets done for you by the factory.
-        ///// </summary>
-        ///// <param name="builder">The container builder.</param>
-        //public void ConfigureContainer(ContainerBuilder builder)
-        //{
-        //   // builder.RegisterModule(new AutoFacModule(Configuration));
-        //}
     }
 }
