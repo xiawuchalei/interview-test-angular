@@ -26,6 +26,15 @@ namespace interview_test_angular
 
             // Register the MediatR request handlers
             services.RegisterRequestHandlers();
+
+            services.AddCors(options => options.AddDefaultPolicy(builder =>
+            {
+
+                builder.WithOrigins(new string[] { "http://localhost:4200", "http://localhost:8100", "http://localhost" })
+                                    .AllowAnyMethod()
+                                    .AllowAnyHeader()
+                                    .AllowCredentials();
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
