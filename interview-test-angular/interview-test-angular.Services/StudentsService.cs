@@ -18,7 +18,7 @@ namespace interview_test_angular.Services
                 Id = 1,
                 FirstName = "Marty",
                 LastName = "McFly",
-                Email = "Back.Future@test.com",
+                Email = "back.future@test.com",
                 Major = "History"
             });
 
@@ -28,6 +28,15 @@ namespace interview_test_angular.Services
                 LastName = "Brown",
                 Email = "dr.brown@test.com",
                 Major = "Physics"
+            });
+
+            students.Add(new Student
+            {
+                Id = 3,
+                FirstName = "Biff",
+                LastName = "Tannen",
+                Email = "biff@test.com",
+                Major = "PE"
             });
         }
 
