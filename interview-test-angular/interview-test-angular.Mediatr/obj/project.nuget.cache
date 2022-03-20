@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "AvWLfWGyPIfRWVx2OEGhnHE6gNkuXHvKcWuXdLktTgStBdn6vg0Hu4CfvT+4gNltOqeRlWcOJHQTIniIOYBL+g==",
+  "dgSpecHash": "hrpL8okafeCOqHr45v/1aWA9+0x2+gqLf9O2Yx6+A6B9hRrCSlJX2QSo/CQdfYpfObIsbAxgybUDZbYdVtMDMw==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\interview-test-angular\\interview-test-angular\\interview-test-angular.Mediatr\\interview-test-angular.Mediatr.csproj",
+  "projectFilePath": "/Users/danielbuchanan/Projects/interview-test-angular/interview-test-angular/interview-test-angular.Mediatr/interview-test-angular.Mediatr.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\delangea\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
-    "C:\\Users\\delangea\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
-    "C:\\Users\\delangea\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
-    "C:\\Users\\delangea\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+    "/Users/danielbuchanan/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",
+    "/Users/danielbuchanan/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
+    "/Users/danielbuchanan/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/10.0.1/mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
+    "/Users/danielbuchanan/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "/Users/danielbuchanan/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "/Users/danielbuchanan/.nuget/packages/microsoft.netcore.app.ref/5.0.0/microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

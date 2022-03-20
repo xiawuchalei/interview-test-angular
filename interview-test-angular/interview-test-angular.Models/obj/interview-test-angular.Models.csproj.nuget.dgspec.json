@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\interview-test-angular\\interview-test-angular\\interview-test-angular.Models\\interview-test-angular.Models.csproj": {}
+    "/Users/danielbuchanan/Projects/interview-test-angular/interview-test-angular/interview-test-angular.Models/interview-test-angular.Models.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\interview-test-angular\\interview-test-angular\\interview-test-angular.Models\\interview-test-angular.Models.csproj": {
+    "/Users/danielbuchanan/Projects/interview-test-angular/interview-test-angular/interview-test-angular.Models/interview-test-angular.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\interview-test-angular\\interview-test-angular\\interview-test-angular.Models\\interview-test-angular.Models.csproj",
+        "projectUniqueName": "/Users/danielbuchanan/Projects/interview-test-angular/interview-test-angular/interview-test-angular.Models/interview-test-angular.Models.csproj",
         "projectName": "interview-test-angular.Models",
-        "projectPath": "D:\\Projects\\interview-test-angular\\interview-test-angular\\interview-test-angular.Models\\interview-test-angular.Models.csproj",
-        "packagesPath": "C:\\Users\\delangea\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\interview-test-angular\\interview-test-angular\\interview-test-angular.Models\\obj\\",
+        "projectPath": "/Users/danielbuchanan/Projects/interview-test-angular/interview-test-angular/interview-test-angular.Models/interview-test-angular.Models.csproj",
+        "packagesPath": "/Users/danielbuchanan/.nuget/packages/",
+        "outputPath": "/Users/danielbuchanan/Projects/interview-test-angular/interview-test-angular/interview-test-angular.Models/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\delangea\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/danielbuchanan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,12 +57,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }
