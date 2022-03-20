@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interview-test-angular", "interview-test-angular\interview-test-angular.csproj", "{E4C5F428-E6F3-4258-A6AE-0900740EC357}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "interview-test-angular", "interview-test-angular\interview-test-angular.csproj", "{E4C5F428-E6F3-4258-A6AE-0900740EC357}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interview-test-angular.Mediatr", "interview-test-angular.Mediatr\interview-test-angular.Mediatr.csproj", "{4399555C-ADEB-467E-A08F-59FCB1BA42EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "interview-test-angular.Mediatr", "interview-test-angular.Mediatr\interview-test-angular.Mediatr.csproj", "{4399555C-ADEB-467E-A08F-59FCB1BA42EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interview-test-angular.Models", "interview-test-angular.Models\interview-test-angular.Models.csproj", "{3F512A39-4A47-4F91-9AB7-F580A32FC771}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "interview-test-angular.Models", "interview-test-angular.Models\interview-test-angular.Models.csproj", "{3F512A39-4A47-4F91-9AB7-F580A32FC771}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interview-test-angular.Services", "interview-test-angular.Services\interview-test-angular.Services.csproj", "{F0E18FBF-5C76-497A-BB15-8ACB8F561229}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{3F512A39-4A47-4F91-9AB7-F580A32FC771}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F512A39-4A47-4F91-9AB7-F580A32FC771}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F512A39-4A47-4F91-9AB7-F580A32FC771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0E18FBF-5C76-497A-BB15-8ACB8F561229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0E18FBF-5C76-497A-BB15-8ACB8F561229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0E18FBF-5C76-497A-BB15-8ACB8F561229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0E18FBF-5C76-497A-BB15-8ACB8F561229}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

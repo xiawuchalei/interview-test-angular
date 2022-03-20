@@ -1,4 +1,5 @@
-﻿using interview_test_angular.Mediatr.Forecast;
+﻿using interview_test_angular.Mediatr.Students;
+using interview_test_angular.Models.Students;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -11,7 +12,7 @@ namespace interview_test_angular.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class StudentsController : ControllerBase
     {
         private IMediator mediator;
 
@@ -20,19 +21,19 @@ namespace interview_test_angular.Controllers
         /// </summary>
         protected IMediator Mediator => mediator ??= (IMediator)HttpContext.RequestServices.GetService(typeof(IMediator))!;
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<StudentsController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public StudentsController(ILogger<StudentsController> logger)
         {
             _logger = logger;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<WeatherForecast>> Get()
+        public async Task<IEnumerable<Student>> Get()
         {
-            var reponse = await Mediator.Send(new GetForcastRequest());
+            var reponse = await Mediator.Send(new GetStudentsRequest());
 
-            return reponse.Forecast;
+            return reponse.Students;
         }
     }
 }
