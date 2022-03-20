@@ -15,7 +15,6 @@ namespace interview_test_angular.Services
         {
             students.Add(new Student
             {
-                Id = 1,
                 FirstName = "Marty",
                 LastName = "McFly",
                 Email = "back.future@test.com",
@@ -23,7 +22,6 @@ namespace interview_test_angular.Services
             });
 
             students.Add(new Student {
-                Id = 2,
                 FirstName = "Emmett",
                 LastName = "Brown",
                 Email = "dr.brown@test.com",
@@ -32,7 +30,6 @@ namespace interview_test_angular.Services
 
             students.Add(new Student
             {
-                Id = 3,
                 FirstName = "Biff",
                 LastName = "Tannen",
                 Email = "biff@test.com",
