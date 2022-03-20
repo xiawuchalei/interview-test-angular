@@ -10,5 +10,40 @@ namespace interview_test_angular.Services
     public class StudentsService : IStudentsService
     {
         public List<Student> students = new List<Student>();
+
+        public StudentsService()
+        {
+            students.Add(new Student
+            {
+                Id = 1,
+                FirstName = "Marty",
+                LastName = "McFly",
+                Email = "Back.Future@test.com",
+                Major = "History"
+            });
+
+            students.Add(new Student {
+                Id = 2,
+                FirstName = "Emmett",
+                LastName = "Brown",
+                Email = "dr.brown@test.com",
+                Major = "Physics"
+            });
+        }
+
+        public bool AddStudent(Student student)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeleteStudent(Student student)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Student> GetAllStudents()
+        {
+            return students;
+        }
     }
 }

@@ -17,11 +17,6 @@ namespace interview_test_angular.Mediatr.Students
     public class GetStudentsResponse
     {
         public List<Student> Students { get; set; }
-
-        public GetStudentsResponse()
-        {
-            Students = new List<Student>();
-        }
     }
 
     public class GetStudentsHandler : IRequestHandler<GetStudentsRequest, GetStudentsResponse>
@@ -35,7 +30,13 @@ namespace interview_test_angular.Mediatr.Students
 
         public Task<GetStudentsResponse> Handle(GetStudentsRequest request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            // Gets all of the students
+            var response = new GetStudentsResponse
+            {
+                Students = _studentsService.GetAllStudents()
+            };
+
+            return Task.FromResult(response);
         }
     }
 }
