@@ -37,16 +37,32 @@ namespace interview_test_angular.Services
             });
         }
 
+        /// <summary>
+        /// Adds a new student to the system
+        /// </summary>
+        /// <param name="student"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
         public bool AddStudent(Student student)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// removes a student from the system
+        /// </summary>
+        /// <param name="student"></param>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
         public bool DeleteStudent(Student student)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Returns all of the students currently in the system
+        /// </summary>
+        /// <returns></returns>
         public List<Student> GetAllStudents()
         {
             return students;

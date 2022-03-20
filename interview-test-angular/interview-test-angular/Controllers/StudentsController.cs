@@ -28,6 +28,10 @@ namespace interview_test_angular.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Gets the current students
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IEnumerable<Student>> Get()
         {
