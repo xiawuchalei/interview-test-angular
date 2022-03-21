@@ -1,4 +1,5 @@
 using interview_test_angular.Mediatr;
+using interview_test_angular.Services;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -35,6 +36,8 @@ namespace interview_test_angular
             }));
 
             services.AddSwaggerGen();
+
+            services.AddSingleton<IStudentsService, StudentsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
