@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace interview_test_angular.Mediatr
+namespace StudentApi.Mediatr
 {
     public static class Dependencies
     {

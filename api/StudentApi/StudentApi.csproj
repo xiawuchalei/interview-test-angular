@@ -9,7 +9,7 @@
 
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
-    <RootNamespace>interview_test_angular</RootNamespace>
+    <RootNamespace>StudentApi</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,9 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\interview-test-angular.Mediatr\interview-test-angular.Mediatr.csproj" />
-    <ProjectReference Include="..\interview-test-angular.Models\interview-test-angular.Models.csproj" />
-    <ProjectReference Include="..\interview-test-angular.Services\interview-test-angular.Services.csproj" />
+    <ProjectReference Include="..\StudentApi.Mediatr\StudentApi.Mediatr.csproj" />
+    <ProjectReference Include="..\StudentApi.Models\StudentApi.Models.csproj" />
+    <ProjectReference Include="..\StudentApi.Services\StudentApi.Services.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

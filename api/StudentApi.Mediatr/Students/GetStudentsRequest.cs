@@ -1,5 +1,5 @@
-﻿using interview_test_angular.Models.Students;
-using interview_test_angular.Services;
+﻿using StudentApi.Models.Students;
+using StudentApi.Services;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace interview_test_angular.Mediatr.Students
+namespace StudentApi.Mediatr.Students
 {
     public class GetStudentsRequest : IRequest<GetStudentsResponse>
     {

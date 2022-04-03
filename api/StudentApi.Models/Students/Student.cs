@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace interview_test_angular.Models.Students
+namespace StudentApi.Models.Students
 {
     public class Student
     {

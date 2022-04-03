@@ -1,11 +1,11 @@
 {
-  "name": "interview_test_angular",
+  "name": "StudentApi",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:ssr": "ng run interview_test_angular:server:dev",
+    "build:ssr": "ng run StudentApi:server:dev",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
