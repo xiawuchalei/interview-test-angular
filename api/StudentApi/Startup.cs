@@ -1,5 +1,5 @@
-using interview_test_angular.Mediatr;
-using interview_test_angular.Services;
+using StudentApi.Mediatr;
+using StudentApi.Services;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
-namespace interview_test_angular
+namespace StudentApi
 {
     public class Startup
     {

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace interview_test_angular
+namespace StudentApi
 {
     public class Program
     {

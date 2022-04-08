@@ -2,17 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>interview_test_angular.Mediatr</RootNamespace>
+    <RootNamespace>StudentApi.Models</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="MediatR" Version="10.0.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\interview-test-angular.Models\interview-test-angular.Models.csproj" />
-    <ProjectReference Include="..\interview-test-angular.Services\interview-test-angular.Services.csproj" />
   </ItemGroup>
 
 </Project>

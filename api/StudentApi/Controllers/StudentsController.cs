@@ -1,5 +1,5 @@
-﻿using interview_test_angular.Mediatr.Students;
-using interview_test_angular.Models.Students;
+﻿using StudentApi.Mediatr.Students;
+using StudentApi.Models.Students;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace interview_test_angular.Controllers
+namespace StudentApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
