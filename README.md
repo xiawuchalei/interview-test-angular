@@ -4,7 +4,7 @@ This repository is effectively a template for our interview test.
 
 This template contains the following:
 - .Net 5.0 Web API
-- Angular web application
+- Angular web application (recommend using node version 14.x or 16.x as this is Angular 8)
 
 Each of the above is stubbed out and provides some basic functionality.  
 The currently implemented features are as follows:
