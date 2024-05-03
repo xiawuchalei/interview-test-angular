@@ -351,3 +351,6 @@ MigrationBackup/
 
 # don't commit .DS_Store
 .DS_Store
+
+.idea/
+**/.idea
