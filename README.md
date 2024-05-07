@@ -3,7 +3,7 @@
 This repository is effectively a template for our interview test.
 
 This template contains the following:
-- .Net 5.0 Web API
+- .Net 8.0 Web API
 - Angular web application (recommend using node version 14.x or 16.x as this is Angular 8)
 
 Each of the above is stubbed out and provides some basic functionality.  
@@ -11,7 +11,7 @@ The currently implemented features are as follows:
 - List of students on the home page
 - API endpoint to return the full list of students
 
-We ask that you spend two hours to do this test and start by taking a Fork of this repository.  
+We ask that you spend as much of the allotted time to do this test and start by taking a Fork of this repository.  
 
 ## Your Details
 Please enter/replace your details below.
@@ -29,6 +29,9 @@ In order to complete this test you will need the following tools:
 
 You should be able to complete this test on your choice of machine, and some technologies that we use have been deliberately left out to make this accessible as possible.
 The code in this repository will compile and run on Windows, macOS and Linux.
+
+You may if you prefer use your preferred frontend technology, if you are unfamiliar with Angular - although in this case, please note it below:  
+[ ] Using different frontend technology
 
 
 
