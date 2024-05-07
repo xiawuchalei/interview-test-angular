@@ -1,19 +1,5 @@
-import { Component, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-@Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-})
-export class HomeComponent {
-  public students: Student[];
-
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<Student[]>(baseUrl + 'students').subscribe(result => {
-      this.students = result;
-    }, error => console.error(error));
-  }
-}
+import { Component, Inject, OnInit } from '@angular/core';
 
 interface Student {
   id: number;
@@ -21,4 +7,25 @@ interface Student {
   lastName: string;
   email: string;
   major: string;
+}
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css'],
+})
+export class HomeComponent implements OnInit {
+  public students: Student[] = [];
+
+  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+    http.get<Student[]>(baseUrl + 'students').subscribe({
+      next: (result) => {
+        this.students = result;
+      },
+      error: (error) => {
+        console.error(error);
+      },
+    });
+  }
+
+  ngOnInit() {}
 }

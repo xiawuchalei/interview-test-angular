@@ -9,7 +9,7 @@ namespace StudentApi.Mediatr
             this IServiceCollection services)
         {
             return services
-                .AddMediatR(typeof(Dependencies).Assembly);
+                .AddMediatR(c => c.RegisterServicesFromAssembly(typeof(Dependencies).Assembly));
         }
     }
 }

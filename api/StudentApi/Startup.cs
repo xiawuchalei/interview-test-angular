@@ -1,14 +1,10 @@
 using StudentApi.Mediatr;
 using StudentApi.Services;
-using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
 
 namespace StudentApi
 {
@@ -31,12 +27,10 @@ namespace StudentApi
 
             services.AddCors(options => options.AddDefaultPolicy(builder =>
             {
-
                 builder.WithOrigins("http://localhost:4200", "http://localhost:8100", "http://localhost");
             }));
 
             services.AddSwaggerGen();
-
             services.AddSingleton<IStudentsService, StudentsService>();
         }
 
@@ -58,16 +52,11 @@ namespace StudentApi
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-                options.RoutePrefix = string.Empty;
             });
             app.UseCors();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            if (!env.IsDevelopment())
-            {
-                app.UseSpaStaticFiles();
-            }
 
             app.UseRouting();
 

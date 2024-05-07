@@ -1,28 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { HttpClientModule } from "@angular/common/http";
 
-import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
+import { AppComponent } from "./app.component";
+import { RouterModule } from "@angular/router";
+import { HomeComponent } from "./home/home.component";
+import { NavMenuComponent } from "./nav-menu/nav-menu.component";
+
+function getBaseUrl() {
+  return "http://localhost:5000/";
+}
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavMenuComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, HomeComponent, NavMenuComponent],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-    HttpClientModule,
-    FormsModule,
+    BrowserModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-    ])
+      { path: "", component: HomeComponent, pathMatch: "full" },
+      { path: "home", component: HomeComponent, pathMatch: "full" },
+    ]),
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{ provide: "BASE_URL", useFactory: getBaseUrl, deps: [] }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
