@@ -17,6 +17,7 @@ function getBaseUrl() {
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'home', component: HomeComponent, pathMatch: 'full' },
     ]),
     HttpClientModule,
   ],
