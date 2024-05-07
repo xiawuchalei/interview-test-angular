@@ -14,7 +14,6 @@ The currently implemented features are as follows:
 - API endpoint to return the full list of students
 
 We ask that you spend as much of the allotted time to do this test as you can; and start by taking a Fork of this repository.
-What we want to see is what you can do
 
 ## Your Details
 
@@ -39,8 +38,8 @@ In order to complete this test you will need the following tools:
 You should be able to complete this test on your choice of machine, and some technologies that we use have been deliberately left out to make this as accessible as possible.
 The code in this repository will compile and run on Windows, macOS and Linux.
 
-You may if you prefer use your preferred frontend technology, if you are unfamiliar with Angular - in which case, please note it below:
-[ ] Using different frontend technology
+You may if you prefer use your preferred frontend technology, if you are unfamiliar with Angular - in which case, please note it below:  
+- [ ] Using different frontend technology
 
 ## Instructions
 
