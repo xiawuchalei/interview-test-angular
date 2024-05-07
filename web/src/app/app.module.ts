@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { HttpClientModule } from "@angular/common/http";
 
-import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { AppComponent } from "./app.component";
+import { RouterModule } from "@angular/router";
+import { HomeComponent } from "./home/home.component";
+import { NavMenuComponent } from "./nav-menu/nav-menu.component";
 
 function getBaseUrl() {
-  return 'https://localhost:44335/';
+  return "http://localhost:5000/";
 }
 
 @NgModule({
@@ -16,12 +16,12 @@ function getBaseUrl() {
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'home', component: HomeComponent, pathMatch: 'full' },
+      { path: "", component: HomeComponent, pathMatch: "full" },
+      { path: "home", component: HomeComponent, pathMatch: "full" },
     ]),
     HttpClientModule,
   ],
-  providers: [{ provide: 'BASE_URL', useFactory: getBaseUrl, deps: [] }],
+  providers: [{ provide: "BASE_URL", useFactory: getBaseUrl, deps: [] }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
