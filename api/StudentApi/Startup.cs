@@ -25,10 +25,17 @@ namespace StudentApi
             // Register the MediatR request handlers
             services.RegisterRequestHandlers();
 
-            services.AddCors(options => options.AddDefaultPolicy(builder =>
+            services.AddCors(options =>
             {
-                builder.WithOrigins("http://localhost:4200", "http://localhost:8100", "http://localhost");
-            }));
+                options.AddPolicy("AllowSpecificOrigin",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:4200")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod()
+                            .AllowCredentials();
+                    });
+            });
 
             services.AddSwaggerGen();
             services.AddSingleton<IStudentsService, StudentsService>();
@@ -59,6 +66,7 @@ namespace StudentApi
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseCors("AllowSpecificOrigin");
 
             app.UseEndpoints(endpoints =>
             {

@@ -1,5 +1,7 @@
 <h1 id="tableLabel">Students</h1>
 
+<a routerLink="/add-student" class="btn btn-success">Add Student</a>
+
 <p *ngIf="!students"><em>Loading...</em></p>
 
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="students">
@@ -9,6 +11,7 @@
       <th>Lastname</th>
       <th>Email</th>
       <th>Major</th>
+      <th>Average Grade</th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +20,10 @@
       <td>{{ student.lastName }}</td>
       <td>{{ student.email }}</td>
       <td>{{ student.major }}</td>
+      <td [ngClass]="getGradeClass(student.averageGrade)">{{ student.averageGrade }}</td>
+      <td>
+        <button (click)="deleteStudent(student)" class="btn btn-danger">Delete</button>
+      </td>
     </tr>
   </tbody>
 </table>

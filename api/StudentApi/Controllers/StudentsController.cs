@@ -1,5 +1,6 @@
 ﻿using StudentApi.Mediatr.Students;
 using StudentApi.Models.Students;
+using Microsoft.AspNetCore.Cors;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -10,6 +11,7 @@ namespace StudentApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [EnableCors("AllowSpecificOrigin")]
     public class StudentsController : ControllerBase
     {
         private IMediator mediator;
@@ -36,6 +38,48 @@ namespace StudentApi.Controllers
             var reponse = await Mediator.Send(new GetStudentsRequest());
 
             return reponse.Students;
+        }
+
+        /// <summary>
+        /// Adds a new student
+        /// </summary>
+        /// <param name="student"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<IActionResult> Post([FromBody] Student student)
+        {
+            if (student == null)
+            {
+                return BadRequest();
+            }
+
+            var response = await Mediator.Send(new AddStudentRequest { Student = student });
+            if (response.Success)
+            {
+                return CreatedAtAction(nameof(Get), new { email = student.Email }, student);
+            }
+            return StatusCode(500);
+        }
+
+        /// <summary>
+        /// Deletes an existing student
+        /// </summary>
+        /// <param name="student"></param>
+        /// <returns></returns>
+        [HttpDelete]
+        public async Task<IActionResult> Delete([FromBody] Student student)
+        {
+            if (student == null)
+            {
+                return BadRequest();
+            }
+
+            var response = await Mediator.Send(new DeleteStudentRequest { Student = student });
+            if (response.Success)
+            {
+                return NoContent();
+            }
+            return NotFound();
         }
     }
 }

@@ -1,0 +1,36 @@
+<h2>Add Student</h2>
+<form (ngSubmit)="onSubmit()" #studentForm="ngForm">
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" class="form-control" required [(ngModel)]="student.firstName" name="firstName">
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" class="form-control" required [(ngModel)]="student.lastName" name="lastName">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email" id="email" class="form-control" required email [(ngModel)]="student.email" name="email" #email="ngModel"
+    />
+    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+        <div *ngIf="email.errors?.['required']">Email is required.</div>
+        <div *ngIf="email.errors?.['email']">Invalid email address.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="major">Major</label>
+    <input type="text" id="major" class="form-control" required [(ngModel)]="student.major" name="major">
+  </div>
+
+
+  <div class="form-group">
+    <label for="averageGrade">Average Grade</label>
+    <input type="number" id="averageGrade" class="form-control" required [(ngModel)]="student.averageGrade" name="averageGrade">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add Student</button>
+</form>

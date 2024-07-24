@@ -1,6 +1,7 @@
 ﻿using StudentApi.Models.Students;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace StudentApi.Services
 {
@@ -15,14 +16,16 @@ namespace StudentApi.Services
                 FirstName = "Marty",
                 LastName = "McFly",
                 Email = "back.future@test.com",
-                Major = "History"
+                Major = "History",
+                AverageGrade = 85
             });
 
             students.Add(new Student {
                 FirstName = "Emmett",
                 LastName = "Brown",
                 Email = "dr.brown@test.com",
-                Major = "Physics"
+                Major = "Physics",
+                AverageGrade = 63
             });
 
             students.Add(new Student
@@ -30,7 +33,8 @@ namespace StudentApi.Services
                 FirstName = "Biff",
                 LastName = "Tannen",
                 Email = "biff@test.com",
-                Major = "PE"
+                Major = "PE",
+                AverageGrade = 48
             });
         }
 
@@ -42,7 +46,11 @@ namespace StudentApi.Services
         /// <exception cref="NotImplementedException"></exception>
         public bool AddStudent(Student student)
         {
-            throw new NotImplementedException();
+            if (student == null)
+                throw new ArgumentNullException(nameof(student));
+
+            students.Add(student);
+            return true;
         }
 
         /// <summary>
@@ -53,7 +61,16 @@ namespace StudentApi.Services
         /// <exception cref="NotImplementedException"></exception>
         public bool DeleteStudent(Student student)
         {
-            throw new NotImplementedException();
+            if (student == null)
+                throw new ArgumentNullException(nameof(student));
+
+            var existingStudent = students.FirstOrDefault(s => s.Email == student.Email);
+            if (existingStudent != null)
+            {
+                students.Remove(existingStudent);
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
