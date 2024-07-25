@@ -1,36 +1,34 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-
-interface Student {
-  id: number;
-  firstName: string;
-  lastName: string;
-  email: string;
-  major: string;
-  averageGrade: number;
-}
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-student',
   templateUrl: './add-student.component.html',
-  styleUrls: ['./add-student.component.css']
+  styleUrls: ['./add-student.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class AddStudentComponent {
-  public student: Student = {
-    id: 0,
-    firstName: '',
-    lastName: '',
-    email: '',
-    major: '',
-    averageGrade: 0 
-  };
+  studentForm: FormGroup;
 
-  constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string, private router: Router) {}
+  constructor(private fb: FormBuilder, private http: HttpClient, @Inject('BASE_URL') private baseUrl: string, private router: Router) {
+    this.studentForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      major: ['', Validators.required],
+      averageGrade: ['', [Validators.required, Validators.min(0), Validators.max(100)]]
+    });
+  }
 
   onSubmit() {
+    if (this.studentForm.invalid) {
+      return;
+    }
+
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    this.http.post<Student>(this.baseUrl + 'students', this.student, { headers }).subscribe({
+    this.http.post(this.baseUrl + 'students', this.studentForm.value, { headers }).subscribe({
       next: (result) => {
         this.router.navigate(['/']);
         console.log('Student added successfully:', result);
